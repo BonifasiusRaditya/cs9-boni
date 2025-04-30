@@ -1,5 +1,5 @@
+import { text } from 'express';
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -24,8 +24,17 @@ export default function LoginPage() {
               className="w-full px-4 py-2 rounded border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400 text-black"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              required
-            />
+              required/>
+          </div>
+
+          <div>
+            <label className="block mb-1 font-medium text-gray-700">Username</label>
+            <input
+              type="text"
+              className="w-full px-4 py-2 rounded border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400 text-black"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required/>
           </div>
 
           <div>
@@ -46,8 +55,7 @@ export default function LoginPage() {
         </form>
 
         <p className="mt-4 text-sm text-center text-black">
-          Belum punya akun? <a href="/register" className="text-blue-500 hover:underline">Daftar di sini</a> 
-          
+          Sudah punya akun? <a href="/login" className="text-blue-500 hover:underline">Login di sini</a>
         </p>
       </div>
     </div>
