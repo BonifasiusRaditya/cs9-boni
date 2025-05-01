@@ -11,14 +11,16 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-   <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Navigate to="/login" replace />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/home" element={<HomePage />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Navigate to="/login" />} />
+          <Route path="/login" element={<LoginPage />} /> 
+          <Route path="/register" element={<RegisterPage />} /> 
+          <Route path="/home" element={<HomePage />} /> 
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 

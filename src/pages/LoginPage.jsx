@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -46,8 +46,7 @@ export default function LoginPage() {
         </form>
 
         <p className="mt-4 text-sm text-center text-black">
-          Belum punya akun? <a href="/register" className="text-blue-500 hover:underline">Daftar di sini</a> 
-          
+        Belum punya akun? <Link to="/register" className="text-blue-500 hover:underline">Daftar di sini</Link>
         </p>
       </div>
     </div>
